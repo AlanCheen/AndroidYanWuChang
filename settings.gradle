@@ -1,2 +1,4 @@
+include ':recyclerview'
+include ':jetpack'
 include ':app'
 rootProject.name = "AndroidYanWuChang"
