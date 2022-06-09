@@ -3,7 +3,8 @@
     package="me.yifeiyuan.android.jetpack">
 
     <application>
-        <activity android:name=".JetpackActivity"></activity>
+        <activity android:name=".lifecycles.LifecycleActivity"></activity>
+        <activity android:name=".JetpackActivity" />
     </application>
 
 </manifest>

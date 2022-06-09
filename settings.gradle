@@ -1,3 +1,4 @@
+include ':common'
 include ':recyclerview'
 include ':jetpack'
 include ':app'
