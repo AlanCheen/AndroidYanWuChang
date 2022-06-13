@@ -19,3 +19,7 @@ RecyclerView 相关
 ### components
 
 四大组件
+
+
+
+## 采坑

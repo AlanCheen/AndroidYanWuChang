@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+
 }
 
 android {
     compileSdkVersion 32
-    buildToolsVersion "32.0.0"
+buildToolsVersion "32.0.0"
 
     defaultConfig {
         minSdkVersion 21

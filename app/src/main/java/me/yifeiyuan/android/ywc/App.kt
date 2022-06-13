@@ -11,12 +11,33 @@ import android.util.Log
  */
 class App : Application() {
 
-    companion object{
+    companion object {
         private const val TAG = "App"
     }
+
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG, "onCreate() called")
+
+//        val config = DebugConfig()
+//        config.debuggable = BuildConfig.DEBUG
+//        config.application = this@App
+//        config.enableStrictMode = true
+//        config.detectActivityLifecycle = true
+//        config.detectFragmentLifecycle = true
+//        config.logLevel = DebugConfig.LogLevel.I
+//        DebugHelper.setup(config)
+
+//        DebugConfig().apply {
+//            debuggable = BuildConfig.DEBUG
+//            application = this@App
+//            enableStrictMode = true
+//            detectActivityLifecycle = true
+//            detectFragmentLifecycle = true
+//            logLevel = DebugConfig.LogLevel.I
+//        }.also {
+//            DebugHelper.setup(it)
+//        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

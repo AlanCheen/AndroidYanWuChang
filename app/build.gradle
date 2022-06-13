@@ -42,8 +42,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api project(path: ':recyclerview')
-    api project(path: ':jetpack')
-    api project(path: ':common')
-    api project(path: ':components')
+//    api project(path: ':recyclerview')
+//    api project(path: ':jetpack')
+//    api project(path: ':common')
+//    api project(path: ':components')
+
+//    implementation 'me.yifeiyuan:debughelper:1.2.3.1'
 }
