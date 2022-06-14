@@ -5,9 +5,8 @@ package me.yifeiyuan.android.common
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-
 annotation class YWC(
     val logTag: String = "YWC",
-    val title: String = "演武场",
+    val title: String = "",
     val logLifecycle: Boolean = false
 )

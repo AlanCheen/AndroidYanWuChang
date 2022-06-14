@@ -11,9 +11,9 @@ import me.yifeiyuan.android.jetpack.R
 @YWC(
     LifecycleActivity.TAG,
     LifecycleActivity.TAG,
-    logLifecycle = false
 )
 class LifecycleActivity : BaseActivity() {
+
     companion object{
          const val TAG = "LifecycleActivity"
     }

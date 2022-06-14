@@ -26,8 +26,8 @@ open class BaseActivity : AppCompatActivity() {
 
         ywcAnnotation?.let {
             logLifecycle = ywcAnnotation.logLifecycle
-            logTag = ywcAnnotation.logTag
-            title = ywcAnnotation.title
+            logTag = ywcAnnotation.logTag.ifEmpty { "BaseActivity" }
+            title = ywcAnnotation.title.ifEmpty { ywcAnnotation.logTag }
         }
     }
 
