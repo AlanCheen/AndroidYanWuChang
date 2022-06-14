@@ -5,6 +5,8 @@ import android.content.ComponentCallbacks
 import android.content.Context
 import android.content.res.Configuration
 import android.util.Log
+import me.yifeiyuan.adh.DebugConfig
+import me.yifeiyuan.adh.DebugHelper
 
 /**
  * Created by 程序亦非猿 on 2022/5/30.
@@ -19,25 +21,16 @@ class App : Application() {
         super.onCreate()
         Log.d(TAG, "onCreate() called")
 
-//        val config = DebugConfig()
-//        config.debuggable = BuildConfig.DEBUG
-//        config.application = this@App
-//        config.enableStrictMode = true
-//        config.detectActivityLifecycle = true
-//        config.detectFragmentLifecycle = true
-//        config.logLevel = DebugConfig.LogLevel.I
-//        DebugHelper.setup(config)
-
-//        DebugConfig().apply {
-//            debuggable = BuildConfig.DEBUG
-//            application = this@App
-//            enableStrictMode = true
-//            detectActivityLifecycle = true
-//            detectFragmentLifecycle = true
-//            logLevel = DebugConfig.LogLevel.I
-//        }.also {
-//            DebugHelper.setup(it)
-//        }
+        DebugConfig().apply {
+            debuggable = false
+            application = this@App
+            enableStrictMode = false
+            detectActivityLifecycle = true
+            detectFragmentLifecycle = true
+            logLevel = DebugConfig.LogLevel.V
+        }.also {
+            DebugHelper.setup(it)
+        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

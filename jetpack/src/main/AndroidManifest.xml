@@ -3,8 +3,18 @@
     package="me.yifeiyuan.android.jetpack">
 
     <application>
-        <activity android:name=".lifecycles.LifecycleActivity" />
-        <activity android:name=".JetpackActivity" />
+        <activity
+            android:name=".lifecycles.viewmodel.ViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lifecycles.livedata.LiveDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lifecycles.LifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JetpackActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

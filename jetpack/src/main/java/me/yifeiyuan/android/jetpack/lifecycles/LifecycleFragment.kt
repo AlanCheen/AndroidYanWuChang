@@ -15,7 +15,6 @@ class LifecycleFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
