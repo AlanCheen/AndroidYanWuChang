@@ -3,7 +3,13 @@
     package="me.yifeiyuan.android.components">
 
     <application>
-        <activity android:name=".ComponentsActivity"></activity>
+        <activity
+            android:name=".ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BroadcastReceiverActivity"
+            android:exported="false" />
+        <activity android:name=".ComponentsActivity" />
     </application>
 
 </manifest>

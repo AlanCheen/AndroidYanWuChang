@@ -4,6 +4,9 @@
 
     <application>
         <activity
+            android:name=".DataStoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".lifecycles.viewmodel.ViewModelActivity"
             android:exported="false" />
         <activity

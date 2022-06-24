@@ -5,6 +5,7 @@ import android.content.ComponentCallbacks
 import android.content.Context
 import android.content.res.Configuration
 import android.util.Log
+import androidx.recyclerview.widget.RecyclerView
 import me.yifeiyuan.adh.DebugConfig
 import me.yifeiyuan.adh.DebugHelper
 
@@ -30,6 +31,15 @@ class App : Application() {
             logLevel = DebugConfig.LogLevel.V
         }.also {
             DebugHelper.setup(it)
+        }
+
+        try {
+            // TODO: 试试开启 RecyclerView.DEBUG = true ?
+            val debugField = RecyclerView::class.java.getField("DEBUG")
+            debugField.isAccessible  = true
+            debugField.set(null, true)
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 

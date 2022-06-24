@@ -7,11 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * Created by 程序亦非猿 on 2022/6/14.
  */
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity {
 
     var logTag = "BaseActivity"
 
     var logLifecycle = false
+
+    constructor() : super()
+    constructor(contentLayoutId: Int) : super(contentLayoutId)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +42,9 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
+        if (logLifecycle) {
+            log("Activity.onResume:  super.onResume() 调用之前")
+        }
         super.onResume()
         if (logLifecycle) {
             log("Activity.onResume: ")
