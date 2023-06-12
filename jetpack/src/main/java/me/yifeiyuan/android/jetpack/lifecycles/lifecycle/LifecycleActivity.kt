@@ -1,4 +1,4 @@
-package me.yifeiyuan.android.jetpack.lifecycles
+package me.yifeiyuan.android.jetpack.lifecycles.lifecycle
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +8,9 @@ import me.yifeiyuan.android.common.BaseActivity
 import me.yifeiyuan.android.common.YWC
 import me.yifeiyuan.android.jetpack.R
 
+/**
+ * 测试 Lifecycle 的代码
+ */
 @YWC(
     LifecycleActivity.TAG,
     LifecycleActivity.TAG,
@@ -30,10 +33,10 @@ class LifecycleActivity : BaseActivity() {
         setContentView(R.layout.activity_lifecycle)
 
         //官方废弃
-        testLifecycleObserverWithLifecycleOnEvent()
+//        testLifecycleObserverWithLifecycleOnEvent()
 
 //        testDefaultLifecycleObserver()
-//        testLifecycleEventObserver()
+        testLifecycleEventObserver()
 //        lifecycle.addObserver(ConflictLifecycleObserver())
     }
 
@@ -68,6 +71,7 @@ class LifecycleActivity : BaseActivity() {
                     Lifecycle.Event.ON_DESTROY -> {
                         Log.d(TAG, "LifecycleEventObserver: ON_DESTROY")
                     }
+                    //不会有 on any 事件
                     Lifecycle.Event.ON_ANY -> {
                         Log.d(TAG, "LifecycleEventObserver: ON_ANY")
                     }

@@ -1,4 +1,4 @@
-package me.yifeiyuan.android.jetpack.lifecycles
+package me.yifeiyuan.android.jetpack.lifecycles.lifecycle
 
 import android.util.Log
 import androidx.lifecycle.Lifecycle

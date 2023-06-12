@@ -13,7 +13,7 @@
             android:name=".lifecycles.livedata.LiveDataActivity"
             android:exported="false" />
         <activity
-            android:name=".lifecycles.LifecycleActivity"
+            android:name=".lifecycles.lifecycle.LifecycleActivity"
             android:exported="false" />
         <activity
             android:name=".JetpackActivity"

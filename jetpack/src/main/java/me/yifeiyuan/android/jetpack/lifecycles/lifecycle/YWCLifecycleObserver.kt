@@ -1,4 +1,4 @@
-package me.yifeiyuan.android.jetpack.lifecycles
+package me.yifeiyuan.android.jetpack.lifecycles.lifecycle
 
 import android.util.Log
 import androidx.lifecycle.Lifecycle
@@ -8,6 +8,12 @@ import androidx.lifecycle.OnLifecycleEvent
 
 /**
  * Created by 程序亦非猿 on 2022/6/13.
+ *
+ * @OnLifecycleEvent 已经被废弃
+ *
+ * 注解的方法里可以加上 lifecycleOwner 参数
+ * onStart()
+ * onStart(owner: LifecycleOwner)
  */
 class YWCLifecycleObserver : LifecycleObserver {
 
@@ -21,7 +27,7 @@ class YWCLifecycleObserver : LifecycleObserver {
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun onStart() {
+    fun onStart(owner: LifecycleOwner) {
         Log.d(TAG, "onStart() called")
     }
 
@@ -31,17 +37,17 @@ class YWCLifecycleObserver : LifecycleObserver {
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    fun onPause() {
+    fun onPause(owner: LifecycleOwner) {
         Log.d(TAG, "onPause() called")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    fun onStop() {
+    fun onStop(owner: LifecycleOwner) {
         Log.d(TAG, "onStop() called")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    fun onDestroy() {
+    fun onDestroy(owner: LifecycleOwner) {
         Log.d(TAG, "onDestroy() called")
     }
 
