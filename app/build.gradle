@@ -33,8 +33,6 @@ android {
 }
 
 dependencies {
-    implementation "com.heytap.msp.sdk:keychain-sdk:1.0.0.0"
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -55,7 +53,6 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-rc02"
-
 }
 
 configurations.all {
